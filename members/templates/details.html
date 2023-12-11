@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mymember.firstname }} {{ mymember.lastname }}
+{% endblock %}
+
+{% block content %}
+  <div style="max-width: 800px; margin: 20px auto; padding: 20px; text-align: center; background-color: #007BFF; color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    <h1 style="color: #fff; font-family: 'Arial', sans-serif;">{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+    
+    <p style="color: #fff;">Phone: {{ mymember.phone }}</p>
+    <p style="color: #ccc;">Member since: {{ mymember.joined_date }}</p>
+    
+    <p style="margin-top: 20px;">
+      <a href="/members" style="color: #fff; text-decoration: none; font-family: 'Arial', sans-serif; font-weight: bold;">
+        Back to Members
+      </a>
+    </p>
+  </div>
+{% endblock %}
